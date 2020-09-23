@@ -102,7 +102,7 @@ public class Percolation {
         test.open(1,2);
         test.open(2, 2);
         if (test.percolates()) {
-            StdOut.println("counts: " + test.count);
+            StdOut.println("counts: " + test.numberOfOpenSites());
             StdOut.println("percolates!");
         } else {
             StdOut.println("not percolate...");
