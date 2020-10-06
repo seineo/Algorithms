@@ -11,3 +11,8 @@
 
 - stacks and queues
 - elementary sorts
+
+### [week3](https://github.com/seineo/Algorithms/blob/master/Part1/week3/README.md)
+
+- merge sort
+- quick sort
