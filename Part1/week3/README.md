@@ -25,3 +25,9 @@ Collinear Points:
 1. [Point.java](https://github.com/seineo/Algorithms/blob/master/Part1/week3/Point.java)
 2. [BruteCollinearPoints.java](https://github.com/seineo/Algorithms/blob/master/Part1/week3/BruteCollinearPoints.java)
 3. [FastCollinearPoints.java](https://github.com/seineo/Algorithms/blob/master/Part1/week3/FastCollinearPoints.java)
+
+### Interview Questions
+
+1. [Merging with smaller auxiliary array](https://github.com/seineo/Algorithms/blob/master/Part1/week3/MergeWithSmallerArray.java)
+2. [Counting inversions](https://github.com/seineo/Algorithms/blob/master/Part1/week3/CountingInversions.java)
+3. [Shuffling a linked list](https://github.com/seineo/Algorithms/blob/master/Part1/week3/ShuffleList.java)
