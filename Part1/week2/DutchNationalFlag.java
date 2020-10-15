@@ -2,6 +2,7 @@ import edu.princeton.cs.algs4.StdOut;
 import edu.princeton.cs.algs4.StdRandom;
 
 public class DutchNationalFlag {
+    // use integer to represent color
     public static final int RED = 0;
     public static final int WHITE = 1;
     public static final int BLUE = 2;
@@ -11,6 +12,7 @@ public class DutchNationalFlag {
         a = in;
     }
 
+    // sort using 3-way partitioning quick sort
     private static void sort() {
         StdRandom.shuffle(a);
         int i = 0;
@@ -37,12 +39,18 @@ public class DutchNationalFlag {
     }
 
     private static void show() {
-        for (int i = 0; i < a.length; i++)
-            StdOut.println(a[i]);
+        for (int i = 0; i < a.length; i++) {
+            if (a[i] == RED)
+                StdOut.println("RED");
+            else if (a[i] == WHITE)
+                StdOut.println("WHITE");
+            else
+                StdOut.println("BLUE");
+        }
     }
 
     public static void main(String[] args) {
-        int n = 10;
+        int n = 12;
         int[] arr = new int[n];
         for (int i = 0; i < n; i++)
             arr[i] = StdRandom.uniform(3);
