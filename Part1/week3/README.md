@@ -31,3 +31,21 @@ Collinear Points:
 1. [Merging with smaller auxiliary array](https://github.com/seineo/Algorithms/blob/master/Part1/week3/MergeWithSmallerArray.java)
 2. [Counting inversions](https://github.com/seineo/Algorithms/blob/master/Part1/week3/CountingInversions.java)
 3. [Shuffling a linked list](https://github.com/seineo/Algorithms/blob/master/Part1/week3/ShuffleList.java)
+
+## Quicksort
+
+### Interview Questions
+
+1. [Nuts and bolts](https://github.com/seineo/Algorithms/blob/master/Part1/week3/NutsAndBolts.java)
+
+2. [Selection in two sorted arrays](https://github.com/seineo/Algorithms/blob/master/Part1/week3/SelectionInTwoSortedArrays.java)
+
+   Similar problem in leetcode: [Median of Two Sorted Arrays](https://leetcode-cn.com/problems/median-of-two-sorted-arrays/)
+
+3. Decimal dominants:
+
+   - [use three-way partitioning quick sort](https://github.com/seineo/Algorithms/blob/master/Part1/week3/ThreeWayQSDecimalDominant.java)
+   - [use a variant of Boyer-Moore majority vote algorithm(nine counters)](https://github.com/seineo/Algorithms/blob/master/Part1/week3/NineCountersDecimalDominant.java)
+
+   I don't know how to solve it using quick select. If you know, please submit an issue or a pull request.
+
