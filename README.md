@@ -16,3 +16,8 @@
 
 - merge sort
 - quick sort
+
+### [week4](https://github.com/seineo/Algorithms/blob/master/Part1/week4/README.md)
+
+- priority queues
+- elementary symbol tables
