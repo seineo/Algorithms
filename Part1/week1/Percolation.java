@@ -1,3 +1,9 @@
+/* *****************************************************************************
+ *  Name:              Alan Turing
+ *  Coursera User ID:  123456
+ *  Last modified:     1/1/2019
+ **************************************************************************** */
+
 import edu.princeton.cs.algs4.StdOut;
 import edu.princeton.cs.algs4.WeightedQuickUnionUF;
 
@@ -13,15 +19,15 @@ public class Percolation {
             throw new IllegalArgumentException("N is less than or equal to 0.");
         gridSize = N;
         count = 0;
-        objects = new WeightedQuickUnionUF(N*N + 2);  // the last two are virtual nodes
+        objects = new WeightedQuickUnionUF(N*N + 2);  // the first and the last are virtual nodes
         dupObjects = new WeightedQuickUnionUF(N*N + 1);  // the last is virtual-top node
         // link to the virtual-top
-        for (int i = 0;i < N;i++) {
-            objects.union(i, N*N);
-            dupObjects.union(i, N*N);
+        for (int i = 1;i <= N;i++) {
+            objects.union(i, 0);
+            dupObjects.union(i, 0);
         }
         //link to the virtual-bottom
-        for (int i =N*N-N;i < N*N;i++) {
+        for (int i = N*N-N+1;i <= N*N;i++) {
             objects.union(i, N*N + 1);
         }
         opened = new boolean[N][N];
@@ -33,7 +39,7 @@ public class Percolation {
         if (isOpen(i, j))
             return;
         count++;
-        opened[i-1][j-1] = true; // mark it as opened
+        opened[i - 1][j - 1] = true; // mark it as opened
         int p = map(i, j);
         // link to open neighbors of four directions
         int[] dir1 = {1, -1, 0, 0};
@@ -52,7 +58,7 @@ public class Percolation {
     // check whether (i, j) is open
     public boolean isOpen(int i, int j) {
         validate(i, j);
-        return opened[i-1][j-1];
+        return opened[i - 1][j - 1];
     }
 
     // check whether (i, j) is full
@@ -62,7 +68,7 @@ public class Percolation {
         if (!isOpen(i, j))
             return false;
         else
-            return dupObjects.find(p) == dupObjects.find(gridSize*gridSize);
+            return dupObjects.find(p) == dupObjects.find(0);
     }
 
     // returns the number of open sites
@@ -74,7 +80,7 @@ public class Percolation {
     public boolean percolates() {
         if (gridSize == 1)
             return isOpen(1, 1);
-        return objects.find(gridSize*gridSize) == objects.find(gridSize*gridSize+1);
+        return objects.find(0) == objects.find(gridSize*gridSize+1);
     }
 
     /* map two-dimensional (row, column) pair to a one-dimensional union find objects,
@@ -92,7 +98,7 @@ public class Percolation {
             throw new IllegalArgumentException("column index " + j + " is not valid.");
     }
 
-    // check (row, col) whether in bounds
+    // check whether index (i, j)  is in bound
     private boolean inRange(int i, int j) {
         return (i >= 1 && i <= gridSize) && (j >= 1 && j <= gridSize);
     }
@@ -102,7 +108,7 @@ public class Percolation {
         test.open(1,2);
         test.open(2, 2);
         if (test.percolates()) {
-            StdOut.println("counts: " + test.numberOfOpenSites());
+            StdOut.println("counts: " + test.count);
             StdOut.println("percolates!");
         } else {
             StdOut.println("not percolate...");
