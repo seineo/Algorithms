@@ -21,5 +21,9 @@ Reference source files and input files are [here](https://algs4.cs.princeton.edu
 ### Interview Questions
 
 1. [Dynamic median](https://github.com/seineo/Algorithms/blob/master/Part1/week4/DynamicMedian.java)
+
 2. [Randamized priority queue](https://github.com/seineo/Algorithms/blob/master/Part1/week4/RandamizedHeap.java)
+
 3. [Taxicab numbers](https://github.com/seineo/Algorithms/blob/master/Part1/week4/TaxicabNumbers.java)
+
+   [Reference](https://github.com/keweishang/algorithm_princeton/blob/master/interview_questions/questions_answers_7.md)
