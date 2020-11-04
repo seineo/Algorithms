@@ -80,9 +80,14 @@ Reference source files and input files are [here](https://algs4.cs.princeton.edu
                q.enqueue(root.key);
                root = root.right;
            } else {
+               // find the predecessor
                Node pre = root.left;
                while (pre.right != null && pre.right != root)
                    pre = pre.right;
+               /* If the right node of predecessor is null, then the predecessor is still not visited,
+                  so we link it to the current node. Otherwise, the predecessor has already visited,
+                  and we just set the right node of it null and print out the current node and then turn to
+                  next node*/
                if (pre.right == null) {
                    pre.right = root;
                    root = root.left;
